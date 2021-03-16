@@ -23,7 +23,7 @@ const routes = [
 	{
 		path: '/instalacion',
 		name: 'Instalacion',
-		component: () => import(/* webpackChunkName: "register" */ '../views/Register.vue')
+		component: () => import(/* webpackChunkName: "instalation" */ '../views/Instalation.vue')
 	},
   {
     path: '/auto/nuevo',
