@@ -21,7 +21,7 @@
     <v-divider></v-divider>
 				<!-- Clientes -->
 		<v-list>
-      <v-list-item>
+      <v-list-item :to="{ name: 'CustomerList' }">
 				<v-list-item-action>
 					<v-icon>mdi-account-group</v-icon>
 				</v-list-item-action>
@@ -29,22 +29,11 @@
           <v-list-item-title >CLIENTES</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
-
-			<v-list-item :to="{ name: 'CustomerNew' }">
-				<v-list-item-content>
-					<v-list-item-title>Nuevo Cliente</v-list-item-title>
-				</v-list-item-content>
-			</v-list-item>
-			<v-list-item :to="{ name: 'CustomerList' }">
-				<v-list-item-content>
-					<v-list-item-title>Listado de Clientes</v-list-item-title>
-				</v-list-item-content>
-			</v-list-item>
     </v-list>
       <v-divider></v-divider>
 		<!-- Productos -->
 		<v-list>
-      <v-list-item>
+      <v-list-item :to="{ name: 'CarList' }">
 				<v-list-item-action>
 					<v-icon>mdi-card-text</v-icon>
 				</v-list-item-action>
@@ -52,23 +41,12 @@
           <v-list-item-title >AUTOS</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
-
-			<v-list-item :to="{ name: 'CarNew' }">
-				<v-list-item-content>
-					<v-list-item-title>Nuevo Producto</v-list-item-title>
-				</v-list-item-content>
-			</v-list-item>
-			<v-list-item :to="{ name: 'carList' }">
-				<v-list-item-content>
-					<v-list-item-title>Listado de Productos</v-list-item-title>
-				</v-list-item-content>
-			</v-list-item>
     </v-list>
 
     <v-divider></v-divider>
 		<!-- Colecciones -->
 		<v-list>
-      <v-list-item>
+      <v-list-item to="{ name: 'OrderList' }">
 				<v-list-item-action>
 					<v-icon>mdi-card-bulleted-settings</v-icon>
 				</v-list-item-action>
@@ -76,17 +54,6 @@
           <v-list-item-title >REPARACIONES</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
-
-			<v-list-item :to="{ name: 'RepairNew' }">
-				<v-list-item-content>
-					<v-list-item-title>Nueva Reparación</v-list-item-title>
-				</v-list-item-content>
-			</v-list-item>
-			<v-list-item :to="{ name: 'RepairList' }">
-				<v-list-item-content>
-					<v-list-item-title>Listado de Reparaciones</v-list-item-title>
-				</v-list-item-content>
-			</v-list-item>
     </v-list>
 
     <v-divider></v-divider>
