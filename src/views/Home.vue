@@ -40,7 +40,7 @@
 							color="primary" 
 							class="white--text" 
 							:disabled="!formValidity" 	
-							@click.stop="login({email:email,password:password})">
+							@click.stop="login()">
 								LOGIN
 						</v-btn>
 					</v-col>
@@ -85,8 +85,36 @@
 		}),
 		methods: {
 			login(){
-				this.$router.push({name: 'Dashboard'});
-			},
+				const me = this;
+				me.loading = true
+				me.email = me.email.trim().toLowerCase()
+				me.password = me.password.trim()
+				axios.post('user/login',{
+				  email: me.email, password: me.password
+				})
+					.then( response => { return response.data })
+					.then(data =>{
+						this.$store.dispatch("userModule/saveToken",data.tokenReturn);
+						me.loaging = false
+						me.$router.push({name: 'Dashboard'});
+          })
+					.catch( function(e){
+						let errorM = null
+						if (e.response.status==404){
+								errorM='No existe el usuario o las credenciales son incorrectas.';
+						} else{
+								errorM='Ocurrió un error con el servidor.';
+						}
+						me.loading = false
+						me.$store.commit('SET_ALERT_MESSAGE', {
+							show: true,
+							color: 'error',
+							message: errorM,
+							timeout: 4000
+						}, {root: true})
+
+					});
+			}
 
 		},
 		computed:{

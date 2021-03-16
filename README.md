@@ -23,7 +23,7 @@ npm run serve
 npm run build
 ```
 
-4. ejecute /register si es la primera vez para crear usuario administrador
+4. ejecute /instalacion si es la primera vez para crear usuario administrador
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
