@@ -116,7 +116,7 @@ export default {
         name: me.user.name,
         email: me.user.email,
         password: me.user.password
-      }, configuration)
+      })
         .then(function(response){
           me.$store.commit('SET_ALERT_MESSAGE', {
             show: true,
