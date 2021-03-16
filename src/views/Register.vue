@@ -75,7 +75,11 @@
 
 <script>
 import axios from 'axios';
-import { mapState } from 'vuex';
+const header = {
+  "Content-Type": "application/json;charset=utf-8",
+  "Access-Control-Allow-Origin": "*"
+}
+const configuration = {headers: header}
 export default {
   name: 'RegisterView',
   created(){
@@ -112,7 +116,7 @@ export default {
         name: me.user.name,
         email: me.user.email,
         password: me.user.password
-      })
+      }, configuration)
         .then(function(response){
           me.$store.commit('SET_ALERT_MESSAGE', {
             show: true,
