@@ -29,7 +29,7 @@ export default new Vuex.Store({
 				state.alert.color = "primary";
 			}, data.timeout);
 		},
-		setLoader(state, payload) {
+		SET_LOADER(state, payload) {
 			state.loading = payload
 		},
 		setDialog(state, payload) {
@@ -37,6 +37,9 @@ export default new Vuex.Store({
 		},
   },
   actions: {
+  	toggleLoading({ commit }, val){
+  		commit('SET_LOADER', val)
+		}
   },
   modules: {
 		userModule,

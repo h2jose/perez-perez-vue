@@ -96,24 +96,13 @@
 			}],
 
 		}),
-		mounted(){
+		created(){
 			this.getCustomers()
 		},
 		methods: {
 
 			...mapActions('customerModule',['getCustomers','deleteCustomer']),
 
-			async getData2(){
-				let me = this;
-				await axios.get('customer/list', configuration)
-					.then(
-						function (response) {
-							me.customers = response.data;
-						})
-					.catch(function (e) {
-						console.log(e.message)
-					})
-			},
 			newCar(){
 				this.$store.commit('customerModule/setCustomer', [], { root: true } )
 				this.$store.commit('setDialog', true, { root: true })
