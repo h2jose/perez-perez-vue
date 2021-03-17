@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import * as userModule from './modules/user'
 import customerModule from './modules/customer'
+import carModule from './modules/car'
 
 Vue.use(Vuex)
 
@@ -36,13 +37,10 @@ export default new Vuex.Store({
 			state.dialog = payload
 		},
   },
-  actions: {
-  	toggleLoading({ commit }, val){
-  		commit('SET_LOADER', val)
-		}
-  },
+  actions: {},
   modules: {
 		userModule,
-		customerModule
+		customerModule,
+		carModule
   }
 })

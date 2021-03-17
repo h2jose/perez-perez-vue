@@ -9,7 +9,7 @@
 						<v-toolbar-title>{{ formTitle }} </v-toolbar-title>
 						<v-spacer></v-spacer>
 						<v-toolbar-items>
-							<v-btn :loading="saving" dark text @click.stop="saveCustomer()" > <v-icon color="white">mdi-check-circle</v-icon> Guardar</v-btn>
+							<v-btn :loading="saving" dark text @click.stop="validate()" > <v-icon color="white">mdi-check-circle</v-icon> Guardar</v-btn>
 							<v-btn dark text @click="closeDialog"> <v-icon color="white">mdi-close</v-icon> Cancelar</v-btn>
 						</v-toolbar-items>
 					</v-toolbar>
@@ -77,13 +77,6 @@
 					</v-card-text>
 				</v-card>
 		</v-dialog>
-		
-		<v-snackbar
-			v-model="snackbar"
-			color='success'
-		>
-			Registro procesado satisfactoriamente
-		</v-snackbar>
 	</v-row>
 </template>
 

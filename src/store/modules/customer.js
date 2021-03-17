@@ -18,24 +18,23 @@ export default {
   },
   actions: {
 
-    async getCustomers({ commit,dispatch }) {
+    async getCustomers({ commit }) {
     
 			let arrayCustomers = [];
-      dispatch("toggleLoading", true, { root: true });
+      commit("SET_LOADER", true, { root: true });
     
 			try {
 				await axios.get('customer/list', configuration)
 					.then(
 						function (response) {
 							arrayCustomers = response.data;
-							dispatch("toggleLoading", false, { root: true });
+							commit("SET_LOADER", false, { root: true });
 						})
 					.catch(function (e) {
 						console.log(e.message)
 					})
-        commit("SET_CUSTOMERS", arrayCustomers);
+				commit("SET_CUSTOMERS", arrayCustomers);
       } catch (error) {
-				dispatch("toggleLoading", false, { root: true });
 				console.log(error);
       }
     },
@@ -46,9 +45,10 @@ export default {
 					dni: data.dni,
 					name: data.name,
 					email: data.email,
-					address: data.password,
 					phone: data.phone,
+					address: data.address,
 					notes: data.notes,
+					password: data.password,
 				}, configuration)
 					.then(function(response){
 						commit('SET_ALERT_MESSAGE', {

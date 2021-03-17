@@ -32,7 +32,7 @@ const routes = [
   {
     path: '/auto/listado',
     name: 'CarList',
-    component: () => import(/* webpackChunkName: "CarList" */ '../views/car/List.vue'),
+    component: () => import(/* webpackChunkName: "CarList" */ '../views/car/Index.vue'),
 		meta: { admin: true },
   },
   {

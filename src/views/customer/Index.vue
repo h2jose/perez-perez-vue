@@ -20,6 +20,17 @@
 									<v-icon dark>mdi-plus</v-icon>
 								</v-btn>
 							</v-toolbar>
+              <v-toolbar flat color="white">
+                <v-toolbar-items>
+                  <v-text-field
+                    v-model="search"
+                    append-icon="mdi-magnify"
+                    label="Buscar"
+                    single-line
+                    hide-details
+                  />
+                </v-toolbar-items>
+              </v-toolbar>
 						</template>
 
 						<!-- columna accion -->
@@ -66,7 +77,7 @@
 	import axios from 'axios';
 	import { mapState, mapActions } from "vuex";
 	import store from '@/store'
-	import CustomerDialog from '@/components/Dialog/CustomerDialog.vue'
+	import CustomerDialog from '@/components/dialog/CustomerDialog.vue'
 	const header = {"Token": store.state.userModule.token}
 	const configuration = {headers: header}
 
