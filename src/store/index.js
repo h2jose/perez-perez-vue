@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 import * as userModule from './modules/user'
 import customerModule from './modules/customer'
 import carModule from './modules/car'
+import orderModule from './modules/order'
 
 Vue.use(Vuex)
 
@@ -41,6 +42,7 @@ export default new Vuex.Store({
   modules: {
 		userModule,
 		customerModule,
-		carModule
+		carModule,
+		orderModule
   }
 })

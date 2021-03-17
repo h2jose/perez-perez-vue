@@ -31,7 +31,7 @@
       </v-list-item>
     </v-list>
       <v-divider></v-divider>
-		<!-- Productos -->
+		<!-- Autos -->
 		<v-list>
       <v-list-item :to="{ name: 'CarList' }">
 				<v-list-item-action>
@@ -44,14 +44,14 @@
     </v-list>
 
     <v-divider></v-divider>
-		<!-- Colecciones -->
+		<!-- Reparaciones -->
 		<v-list>
-      <v-list-item to="{ name: 'OrderList' }">
+      <v-list-item :to="{ name: 'OrderList' }">
 				<v-list-item-action>
-					<v-icon>mdi-card-bulleted-settings</v-icon>
+					<v-icon>mdi-alert</v-icon>
 				</v-list-item-action>
       	<v-list-item-content>
-          <v-list-item-title >REPARACIONES</v-list-item-title>
+          <v-list-item-title >ORDENES</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
     </v-list>

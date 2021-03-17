@@ -38,7 +38,7 @@ const routes = [
   {
     path: '/orden/listado',
     name: 'OrderList',
-    component: () => import(/* webpackChunkName: "OrderList" */ '../views/order/List.vue'),
+    component: () => import(/* webpackChunkName: "OrderList" */ '../views/order/Index'),
 		meta: { admin: true },
   },
 
