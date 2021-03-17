@@ -21,7 +21,7 @@
     <v-divider></v-divider>
 				<!-- Clientes -->
 		<v-list>
-      <v-list-item :to="{ name: 'CustomerList' }">
+      <v-list-item :to="{ name: 'CustomerView' }">
 				<v-list-item-action>
 					<v-icon>mdi-account-group</v-icon>
 				</v-list-item-action>
@@ -106,7 +106,7 @@
 		}),
 		methods: {
 			logout(){
-				this.$store.dispatch("userModule/loggedOut",{root: true});
+				this.$store.dispatch("userModule/signOut",{root: true});
 			}
 		},
 		computed: {

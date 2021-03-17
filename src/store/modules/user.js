@@ -30,7 +30,7 @@ export const actions = {
 			commit("SET_USER", decode(token));
 		}
 	},
-	loggedOut({commit}){
+	signOut({commit}){
 		commit("SET_TOKEN", null);
 		commit("SET_USER", null);
 		localStorage.removeItem("token");
